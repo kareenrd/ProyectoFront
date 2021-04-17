@@ -78,7 +78,7 @@ class operaciones {
             //console.log('---- ',canciones);
             for(var i in canciones){
                 console.log(canciones[i]);
-                document.getElementById('lista_canciones').innerHTML += '';
+                document.getElementById('lista_canciones').innerHTML += 'hola?';
             }
 
             
