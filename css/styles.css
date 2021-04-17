@@ -65,6 +65,7 @@ body {
 
 #lista_canciones{
     padding: 15px;
+    width: 100%;
 }
 
 .img_cancion{

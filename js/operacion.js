@@ -78,7 +78,20 @@ class operaciones {
             //console.log('---- ',canciones);
             for(var i in canciones){
                 console.log(canciones[i]);
-                document.getElementById('lista_canciones').innerHTML += 'AHAHAHA';
+                document.getElementById('lista_canciones').innerHTML += 
+                '<li class="col-sm-3" style="margin-top: 15px;">'+
+                    '<div class="card" style="width:100%">'+
+                        '<div class="img_cancion">'+
+                            '<img class="card-img-top" src="imagenes/icon_'+canciones[i].icono+'.svg" alt="Card image" style="width:50%">'+
+                        '</div>'+
+                        '<div class="card-body">'+
+                            '<h6 class="card-title">'+canciones[i].nombre+'</h6>'+
+                            '<audio controls="controls">'+
+                                '<source src="canciones/'+canciones[i].ruta+'" type="audio/mpeg">'+
+                            '</audio>'+
+                        '</div>'+
+                    '</div>'+
+                '</li>';
             }
 
             
