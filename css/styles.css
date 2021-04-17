@@ -1,0 +1,200 @@
+
+body {
+    font-family: 'ABeeZee';
+    font-size: 20px;
+    margin: 0;
+}
+
+.general {
+    background-color: #e9ecef;
+    padding: 50px;
+}
+
+
+.container {
+    margin-top: 80px;
+}
+
+.info {
+    padding: 50px;
+}
+
+.info h3 {
+    font-family: 'Amatic SC';
+    font-size: 50px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+
+#footer{
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    font-family: 'Amatic SC';
+    font-size: 25px;
+}
+
+.top_canciones {
+    width: 100%;
+}
+.top_canciones h2 {
+    font-family: 'Amatic SC';
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px;
+}
+
+#top_canciones audio {
+    width: 90%;
+}
+
+#lista_canciones audio {
+    width: 100%;
+}
+
+.nombre_cancion {
+    font-family: 'Caveat Brush';
+    font-size: 30px;
+    color: #17a2b8;
+}
+
+
+#lista_canciones{
+    padding: 15px;
+}
+
+.img_cancion{
+    width: 100%;
+    background: #e9ecef;
+    text-align: center;
+    padding: 15px;
+}
+
+li {list-style:none;}
+
+
+
+/*******************/
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    font-family: 'Amatic SC';
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.active span {
+    font-size: 35px;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (min-width: 900px){
+    .centrer{
+        padding-left: 25% !important;
+        
+    }
+    .right {
+        float: right !important;
+        margin-top: 10px;
+    }
+    .top{
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 899px){
+    .centrer{
+        padding-left: 10% !important;
+        
+    }
+    .right {
+        float: right !important;
+        margin-top: 10px;
+    }
+    .top{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 799px){
+    .right {
+        float: right !important;
+        margin-top: 10px;
+    }
+    .centrer{
+        padding-left: 5% !important;
+        
+    }
+    .top{
+        margin-top: 10px;
+    }
+}
+
+
+@media screen and (max-width: 699px) {
+    .dropdown .dropbtn,
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .right {
+        float: none !important;
+        margin-top: 0px;
+    }
+    .centrer{
+        padding-left: 5% !important;
+        
+    }
+    .top{
+        margin-top: 0px;
+    }
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+    .topnav.responsive .dropdown-content {
+        position: relative;
+    }
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nombre_cancion{
+        font-size: 20px;
+    }
+}

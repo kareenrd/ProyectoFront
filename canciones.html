@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Canciones</title>
+
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+        <link
+            href='https://fonts.googleapis.com/css?family=Caveat Brush'
+            rel='stylesheet'>
+
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/operacion.js"></script>
+
+    </head>
+    <body onload="op.lista_canciones();">
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">
+                <img src="imagenes/logo.png" alt="logo" style="width:50px;">
+                <span class="text-primary">OYE</span>
+            </a>
+
+            <a href="index.html" class="centrer top">Inicio</a>
+            <a href="canciones.html" class="top">Canciones</a>
+
+            <a class="right" onclick="op.btn_contacto();">Contacto</a>
+            <a href="inicio.html" class="right">Inicio de Sesión</a>
+            <a href="registro.html" class="right">Registro</a>
+
+            <a
+                href="javascript:void(0);"
+                style="font-size:15px;"
+                class="icon"
+                onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h3>Canciones</h3>
+                <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                <br><br>
+                <ul class="col-sm-12" id="lista_canciones">
+
+                    <li class="col-sm-3">
+                        <div class="card" style="width:100%">
+                            <div class="img_cancion">
+                                <img class="card-img-top" src="imagenes/icon_1.svg" alt="Card image" style="width:50%">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Cancion uno</h6>
+                                <audio controls="controls">
+                                    <source src="canciones/uno.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="">Second item</li>
+                    <li class="">Third item</li>
+                    <li class="">Fourth</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="footer" class="text-center" style="margin-bottom:0">
+            <p>Derechos Reservados</p>
+        </div>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+
+            /*$(document).ready(function () {
+                $("#myInput").on("keyup", function () {
+                    var value = $(this)
+                        .val()
+                        .toLowerCase();
+                    $("#lista_canciones *").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                    });
+                });
+            });*/
+
+            $(document).ready(function () {
+                $("#myInput").on("keyup", function () {
+                    var value = $(this)
+                        .val()
+                        .toLowerCase();
+                    $("#lista_canciones li").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
